@@ -9,12 +9,9 @@ export default class Footer extends Component {
 
   render() {
     return (
-      <div id="footer-container" className="banner">
-        {[
-          <p style={{ display: "inline" }}>Copyright &copy; Oliver Isenrich,&nbsp;</p>,
-          this.assignCopyrightYear()
-        ]}
-      </div>
+      <footer id="footer-container" className="banner">
+        <p>Copyright &copy; Oliver Isenrich { this.assignCopyrightYear() }, All Rights Reserved</p>
+      </footer>
     );
   }
 };
