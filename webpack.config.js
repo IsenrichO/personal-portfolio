@@ -7,7 +7,7 @@ module.exports = {
   entry: [
     // 'webpack-dev-server/client?http://localhost:3000',
     // 'webpack/hot/only-dev-server',
-    path.join(__dirname, 'app/app.js')
+    path.join(__dirname, 'app/app')
   ],
   output: {
     path: path.join(__dirname, 'public/js'),
@@ -16,7 +16,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.jsx?$/,
-      loaders: ['react-hot', 'babel'],
+      loaders: ['babel'],
       include: path.join(__dirname, 'app')
     }, { 
       test: /\.json$/, 
@@ -38,3 +38,10 @@ module.exports = {
     // new webpack.HotModuleReplacementPlugin()
   ]
 };
+
+
+// {
+//  test: /\.jsx?$/,
+//  loaders: ['react-hot', 'babel'],
+//  include: path.join(__dirname, 'app')
+// }

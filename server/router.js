@@ -58,21 +58,11 @@ app.use(expressValidator());
 ** Route Controllers
 */
 
-const getRestaurant = require('./controllers/getRestaurant');
-const getJob = require('./controllers/getJob');
-const getPlace = require('./controllers/getPlace');
-const scrapeDetail = require('./controllers/scrapeDetail');
-
 app.use(express.static(path.join(__dirname, '../public')));
 
 /*
  * App routes.
  */
-
-app.post('/api/v1/jobs', getJob.post);
-app.post('/api/v1/food', getRestaurant.post);
-app.post('/api/v1/places', getPlace.post);
-app.post('/api/v1/scrape', scrapeDetail.post);
 
 app.get('/results', (req, res) => {
   res.redirect('/');
